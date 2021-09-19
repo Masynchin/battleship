@@ -168,7 +168,7 @@ class Warships:
         (тогда все остальные клетки корабля должны быть повреждены).
         """
         return all(
-            (x, y) == (cell_x, cell_y) or self.field[y][x].is_damaged
+            self.field[y][x].is_damaged or (x, y) == (cell_x, cell_y)
             for (x, y) in self.get_ship_points(cell_x, cell_y)
         )
 
