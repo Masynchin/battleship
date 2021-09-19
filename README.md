@@ -17,7 +17,7 @@
 git clone https://github.com/Masynchin/warships.git
 ```
 
-или скачать по ссылке `https://github.com/Masynchin/warships/archive/refs/heads/main.zip`
+или скачать его по [ссылке](https://github.com/Masynchin/warships/archive/refs/heads/main.zip)
 
 - Первый игрок запускает сервер
 
