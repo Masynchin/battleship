@@ -1,4 +1,4 @@
-# warships
+# battleship
 
 Консольные кораблики, основанные на сокетах.
 
@@ -14,15 +14,15 @@
 - Оба игрока должны склонировать репозиторий
 
 ```
-git clone https://github.com/Masynchin/warships.git
+git clone https://github.com/Masynchin/battleship.git
 ```
 
-или скачать его по [ссылке](https://github.com/Masynchin/warships/archive/refs/heads/main.zip)
+или скачать его по [ссылке](https://github.com/Masynchin/battleship/archive/refs/heads/main.zip)
 
 - Первый игрок запускает сервер
 
 ```
-cd warships
+cd battleship
 python main.py
 
 Сервер - s, клиент - c: s
@@ -32,7 +32,7 @@ python main.py
 - Второй игрок запускает клиент и подключается к серверу
 
 ```
-cd warships
+cd battleship
 python main.py
 
 Сервер - s, клиент - c: c
