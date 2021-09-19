@@ -1,9 +1,9 @@
 import itertools as it
 from typing import Tuple
 
-from warships.cell import Cell, CellType
-from warships.field import Field
-from warships.warships import MoveResult
+from battleship.cell import Cell, CellType
+from battleship.field import Field
+from battleship.battleship import MoveResult
 
 
 def compress_field(field: Field) -> bytes:

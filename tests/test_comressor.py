@@ -1,7 +1,7 @@
 import pytest
 
-from warships import compressor
-from warships.warships import MoveResult
+from battleship import compressor
+from battleship.battleship import MoveResult
 
 
 @pytest.mark.parametrize(

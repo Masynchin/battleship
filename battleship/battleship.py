@@ -3,7 +3,7 @@ import random
 from enum import IntFlag, auto
 from typing import Iterator, Tuple
 
-from warships.field import Field
+from battleship.field import Field
 
 
 class MoveResult(IntFlag):
@@ -35,7 +35,7 @@ class MoveResult(IntFlag):
         return self == MoveResult.WIN
 
 
-class Warships:
+class Battleship:
     """Интерфейс игры."""
 
     def __init__(self, width: int, height: int):

@@ -1,7 +1,7 @@
 from typing import List
 
-from warships.cell import Cell
-from warships.field import Field
+from battleship.cell import Cell
+from battleship.field import Field
 
 
 ROWS_INDEXES = tuple(map(str, range(1, 11)))

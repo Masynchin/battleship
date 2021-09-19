@@ -2,11 +2,11 @@ import os
 from contextlib import closing
 from typing import Tuple
 
-from warships.commander import Commander, MainCommander, SubCommander
-from warships.command_parser import parse_command
-from warships.exceptions import InvalidCommand
-from warships.printer import print_fields
-from warships.warships import Warships
+from battleship.commander import Commander, MainCommander, SubCommander
+from battleship.command_parser import parse_command
+from battleship.exceptions import InvalidCommand
+from battleship.printer import print_fields
+from battleship.battleship import Battleship
 
 
 def main():
@@ -31,22 +31,22 @@ def main():
 
 
 def process_game(channel: Commander, first_turn: bool):
-    our_warships = Warships(10, 10)
-    our_warships.place_ships()
+    our_battleship = Battleship(10, 10)
+    our_battleship.place_ships()
 
-    enemy_warships = Warships(10, 10)
+    enemy_battleship = Battleship(10, 10)
 
     turn = first_turn
     while True:
         clear_screen()
-        print_fields(our_warships.field, enemy_warships.field)
+        print_fields(our_battleship.field, enemy_battleship.field)
 
         if turn:
             cell_x, cell_y = get_move_coords()
             channel.send_coords(cell_x, cell_y)
             move_result = channel.receive_move_result()
 
-            enemy_warships.update_cell(cell_x, cell_y, move_result)
+            enemy_battleship.update_cell(cell_x, cell_y, move_result)
 
             if move_result.is_miss:
                 turn = False
@@ -57,7 +57,7 @@ def process_game(channel: Commander, first_turn: bool):
 
         else:
             cell_x, cell_y = channel.receive_coords()
-            move_result = our_warships.hit_cell(cell_x, cell_y)
+            move_result = our_battleship.hit_cell(cell_x, cell_y)
             channel.send_move_result(move_result)
 
             if move_result.is_miss:

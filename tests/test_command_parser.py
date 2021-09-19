@@ -1,7 +1,7 @@
 import pytest
 
-from warships.command_parser import parse_command
-from warships.exceptions import InvalidCommand
+from battleship.command_parser import parse_command
+from battleship.exceptions import InvalidCommand
 
 
 @pytest.mark.parametrize(

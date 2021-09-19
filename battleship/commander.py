@@ -1,14 +1,14 @@
 from typing import Tuple
 
-from warships import const
-from warships.client import Client, MainClient, SubClient
-from warships.compressor import (
+from battleship import const
+from battleship.client import Client, MainClient, SubClient
+from battleship.compressor import (
     compress_coords,
     decomress_coords,
     compress_move_result,
     decompress_move_result,
 )
-from warships.warships import MoveResult
+from battleship.battleship import MoveResult
 
 
 class Commander(Client):

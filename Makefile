@@ -1,1 +1,1 @@
-cov: pytest --cov warships tests --cov-report html
+cov: pytest --cov battleship tests --cov-report html

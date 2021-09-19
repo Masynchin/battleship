@@ -1,7 +1,7 @@
 from typing import Tuple
 
-from warships.exceptions import InvalidCommand
-from warships.printer import COLS_INDEXES, ROWS_INDEXES
+from battleship.exceptions import InvalidCommand
+from battleship.printer import COLS_INDEXES, ROWS_INDEXES
 
 
 def parse_command(command: str) -> Tuple[int, int]:

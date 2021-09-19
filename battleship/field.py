@@ -1,6 +1,6 @@
 from typing import Iterator, List
 
-from warships.cell import Cell
+from battleship.cell import Cell
 
 
 class Field(list):

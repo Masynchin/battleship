@@ -1,7 +1,7 @@
 import socket
 
-from warships import const
-from warships.exceptions import CouldNotConfirmError
+from battleship import const
+from battleship.exceptions import CouldNotConfirmError
 
 
 class Client:
